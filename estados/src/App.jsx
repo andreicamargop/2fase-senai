@@ -1,6 +1,9 @@
 
   import { useState } from 'react'
   import './App.css'
+import Conversao from './components/conversao';
+import Conversao2 from './components/Conversao2';
+
 
   function App() {
     const [usuario, setUsuario] = useState("Juca ");
@@ -17,6 +20,9 @@
     }
     return (
       <>
+         <Conversao />
+         <Conversao2 />
+
         <h1>Estados</h1>
         Nome: {nome}
         <div>
