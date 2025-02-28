@@ -3,6 +3,8 @@
   import './App.css'
 import Conversao from './components/conversao';
 import Conversao2 from './components/Conversao2';
+import Estados from './components/Estados';
+import Aviso from './components/Aviso';
 
 
   function App() {
@@ -20,17 +22,13 @@ import Conversao2 from './components/Conversao2';
     }
     return (
       <>
+         <Aviso />
          <Conversao />
          <Conversao2 />
+         <Estados />
 
-        <h1>Estados</h1>
-        Nome: {nome}
-        <div>
-        Usuário: {usuario}
-        </div>
-        <button onClick={lernome}>Alterar nome</button>
-        <button onClick={lerUsuario}> Trocar Usuario </button>
       </>
+      
     )
   }
 

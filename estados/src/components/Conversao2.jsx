@@ -13,9 +13,9 @@ function Conversao2() {
 
   }
     return (
-    <div>
+    <div className='container-conversao2'>
         <h2>km ➡️ milhas ➡️ leguas </h2>
-        <button onClick={converterKmparaMilhas}></button>
+        <button onClick={converterKmparaMilhas}>Converter</button>
     <p>
       Km: {km}
     </p>

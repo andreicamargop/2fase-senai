@@ -14,8 +14,8 @@ function converterRealParaDolar(){
 
 <div className="container-conversao">
   
-      <h2> Real →→ Dolar</h2>
-    <button onClick={converterRealParaDolar}></button>
+      <h2> Real ➡️ Dolar</h2>
+    <button onClick={converterRealParaDolar}>Converter</button>
     <p>
       valor original :R${real}
     </p>
