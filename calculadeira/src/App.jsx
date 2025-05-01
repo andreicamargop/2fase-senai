@@ -1,63 +1,70 @@
 import React, { useState } from 'react';
-import './App.css';
+import './Calculadora.css';
 
-const Calculator = () => {
-  const [input, setInput] = useState('');
+function Calculadora() {
+  const [valor1, setValor1] = useState('');
+  const [valor2, setValor2] = useState('');
+  const [resultado, setResultado] = useState('');
 
-  const handleClick = (value) => {
-    setInput(input + value);
-  };
+  const calcular = (operador) => {
+    const num1 = parseFloat(valor1);
+    const num2 = parseFloat(valor2);
 
-  const handleClear = () => {
-    setInput('');
-  };
-
-  const handleEvaluate = () => {
-    try {
-      setInput(eval(input).toString());
-    } catch (e) {
-      setInput('Error');
+    if (isNaN(num1) || isNaN(num2)) {
+      setResultado('Insira dois números válidos');
+      return;
     }
+
+    let res;
+    switch (operador) {
+      case '+':
+        res = num1 + num2;
+        break;
+      case '-':
+        res = num1 - num2;
+        break;
+      case '*':
+        res = num1 * num2;
+        break;
+      case '/':
+        res = num2 !== 0 ? num1 / num2 : 'Erro: divisão por zero';
+        break;
+      default:
+        res = '';
+    }
+
+    setResultado(res);
   };
 
   return (
-    <div className="calculator">
-      <div className="screen">
-        <input type="text" value={input} disabled />
+    <div className="calc-container">
+      <h2>Calculadeira</h2>
+
+      <div className="inputs">
+        <input
+          type="number"
+          value={valor1}
+          onChange={(e) => setValor1(e.target.value)}
+        />
+        <input
+          type="number"
+          value={valor2}
+          onChange={(e) => setValor2(e.target.value)}
+        />
       </div>
-      <div className="buttons">
-        <button onClick={() => handleClick('1')}>1</button>
-        <button onClick={() => handleClick('2')}>2</button>
-        <button onClick={() => handleClick('3')}>3</button>
-        <button onClick={() => handleClick('+')}>+</button>
 
-        <button onClick={() => handleClick('4')}>4</button>
-        <button onClick={() => handleClick('5')}>5</button>
-        <button onClick={() => handleClick('6')}>6</button>
-        <button onClick={() => handleClick('-')}>-</button>
-
-        <button onClick={() => handleClick('7')}>7</button>
-        <button onClick={() => handleClick('8')}>8</button>
-        <button onClick={() => handleClick('9')}>9</button>
-        <button onClick={() => handleClick('*')}>*</button>
-
-        <button onClick={() => handleClick('0')}>0</button>
-        <button onClick={() => handleClick('.')}>.</button>
-        <button onClick={handleClear}>C</button>
-        <button onClick={() => handleClick('/')}>/</button>
-
-        <button onClick={handleEvaluate}>=</button>
+      <div className="buttons-grid">
+        <button onClick={() => calcular('+')}>+</button>
+        <button onClick={() => calcular('-')}>-</button>
+        <button onClick={() => calcular('*')}>*</button>
+        <button onClick={() => calcular('/')}>/</button>
       </div>
-    </div>
-  );
-};
 
-function App() {
-  return (
-    <div className="App">
-      <Calculator />
+      <div className="resultado">
+        {resultado}
+      </div>
     </div>
   );
 }
 
-export default App;
+export default Calculadora;
