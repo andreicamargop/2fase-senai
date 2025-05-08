@@ -1,0 +1,27 @@
+.body{
+    display: flex ;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+}
+
+.botao-debito{
+    background-color: #FF0000;
+    margin: 5px;
+}
+.botao-credito{
+    background-color: #006400;
+    margin: 5px;
+}
+.quadro{
+    background-color: 	#A9A9A9;
+    width: 30vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid black;
+}
