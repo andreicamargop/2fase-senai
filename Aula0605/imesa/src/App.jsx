@@ -6,11 +6,15 @@ function App() {
   const [ValorTotal, setValorTotal] = useState (0)
 
 function credito(){
-  setValorTotal(ValorTotal + Number(valorImput))    
+  const valor = Number(valorImput)
+  setValorTotal(ValorTotal + valor) 
+  setValorImput('')   
   }
 
 function debito(){
-  setValorTotal(ValorTotal - Number(valorImput))
+  const valor = Number(valorImput)
+  setValorTotal(ValorTotal - valor)
+  setValorImput('')
 }
   
 
