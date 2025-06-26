@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+  }
+  
+  .container-body {
+    background-color: #ffffffcc;
+    padding: 30px 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    max-width: 420px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+  .container-body h1 {
+    margin-bottom: 15px;
+    font-size: 28px;
+    color: #2c3e50;
+  }
+  
+  .container-body h3 {
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  
+  input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #6c5ce7;
+  }
+  
+  button {
+    margin: 10px 5px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .botao-debito {
+    background-color: #e74c3c;
+  }
+  
+  .botao-credito {
+    background-color: #2ecc71;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .movimentacoes {
+    margin-top: 25px;
+    text-align: left;
+    width: 100%;
+    flex-grow: 1; /* Faz a lista ocupar o espaço restante */
+    overflow-y: auto; /* Scroll se muitos itens */
+  }
+  
+  .movimentacoes h3 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+    color: #2c3e50;
+  }
+  
+  .movimentacoes div {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background: #f0f0f0;
+    font-size: 16px;
+  }
+  
+  .credito {
+    border-left: 6px solid #2ecc71;
+    color: #27ae60;
+    background: #e9fcef;
+  }
+  
+  .debito {
+    border-left: 6px solid #e74c3c;
+    color: #c0392b;
+    background: #ffeaea;
+  }
+  
